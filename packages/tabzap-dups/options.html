@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>TabZap Dups Options</title>
+        <link rel="stylesheet" href="shared/options.css">
+        <script src="shared/config.js"></script>
+        <script src="shared/utils.js"></script>
+        <script src="config.js"></script>
+        <script src="options.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <img src="icon48.png" alt="TabZap Dups" class="logo">
+                <h1>TabZap Dups Options</h1>
+            </div>
+            <p class="subtitle">Configure how duplicate tabs are detected and removed</p>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Detection Scope</h2>
+                </div>
+                <div class="setting-row no-border">
+                    <div>
+                        <div class="setting-label">Check for duplicates in</div>
+                        <div class="setting-description">Choose whether to detect duplicates within the current window or across all windows</div>
+                    </div>
+                    <select id="scope">
+                        <option value="window">Current window only</option>
+                        <option value="all">All windows</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Ignore Patterns</h2>
+                </div>
+                <p class="card-description">URLs matching these patterns will never be considered for duplicate detection. One regex per line.</p>
+                <textarea id="ignorepatterns" placeholder="^chrome://&#10;^chrome-extension://"></textarea>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">URL Patterns</h2>
+                </div>
+                <p class="card-description">These patterns extract the canonical portion of URLs for comparison. The first matching pattern wins. One regex per line.</p>
+                <textarea id="urlpatterns" placeholder="^https://www\.amazon\.[^/]+/dp/[A-Z0-9]+&#10;^[^?#]+"></textarea>
+            </div>
+
+            <div class="button-group">
+                <button id="restore_defaults" class="btn-danger">Restore Defaults</button>
+                <button id="load" class="btn-secondary">Reload</button>
+                <button id="save" class="btn-primary">Save</button>
+            </div>
+        </div>
+    </body>
+</html>

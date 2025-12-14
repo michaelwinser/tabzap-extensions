@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "TabZap Dups",
+    "version": "2.0",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_icon": "icon48.png"
+    },
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": true
+    },
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "permissions": [
+        "tabs", "notifications", "webNavigation", "storage", "alarms"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["icon48.png"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}

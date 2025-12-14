@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>TabZap Switch Options</title>
+        <link rel="stylesheet" href="shared/options.css">
+        <script src="shared/config.js"></script>
+        <script src="config.js"></script>
+        <script src="options.js"></script>
+    </head>
+    <body>
+        <div class="container narrow">
+            <div class="header">
+                <img src="icon48.png" alt="TabZap Switch" class="logo">
+                <h1>TabZap Switch Options</h1>
+            </div>
+            <p class="subtitle">Alt-Tab style tab switcher with Most Recently Used ordering</p>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Keyboard Shortcuts</h2>
+                </div>
+                <div class="info-box">
+                    <p style="margin: 0 0 8px 0;">
+                        <strong>Default shortcuts:</strong><br>
+                        <span class="shortcut-key">Media Previous</span> - Switch to previous tab<br>
+                        <span class="shortcut-key">Media Next</span> - Switch forward (undo)
+                    </p>
+                    <p style="margin: 0;">
+                        To customize shortcuts, visit <a href="#" id="shortcuts-link">chrome://extensions/shortcuts</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Switching Scope</h2>
+                </div>
+                <p class="card-description">Choose whether to switch between tabs in the current window only, or across all windows</p>
+
+                <div class="setting-row">
+                    <div>
+                        <div class="setting-label">Tab Scope</div>
+                        <div class="setting-description">Which tabs to include when switching</div>
+                    </div>
+                    <select id="scope">
+                        <option value="current">Current window only</option>
+                        <option value="all">All windows</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Cycle Behavior</h2>
+                </div>
+                <p class="card-description">When rapidly pressing the shortcut, you cycle through tabs. After a pause, the cycle resets.</p>
+
+                <div class="setting-row">
+                    <div>
+                        <div class="setting-label">Cycle Timeout (ms)</div>
+                        <div class="setting-description">Time before cycle position resets</div>
+                    </div>
+                    <input type="number" id="cycleTimeoutMs" min="500" max="5000" step="100" value="1500">
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button id="restore_defaults" class="btn-danger">Restore Defaults</button>
+                <button id="load" class="btn-secondary">Reload</button>
+                <button id="save" class="btn-primary">Save</button>
+            </div>
+        </div>
+    </body>
+</html>

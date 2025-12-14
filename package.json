@@ -1,0 +1,20 @@
+{
+  "name": "tabzap-extensions",
+  "version": "1.0.0",
+  "description": "Monorepo for TabZap browser extension suite",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "clean": "rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelwinser/tabzap-extensions.git"
+  },
+  "keywords": [
+    "chrome-extension",
+    "tabs",
+    "browser"
+  ],
+  "author": "",
+  "license": "MIT"
+}
