@@ -27,13 +27,13 @@
     "commands": {
         "switch-previous": {
             "suggested_key": {
-                "default": "MediaPrevTrack"
+                "default": "MediaNextTrack"
             },
             "description": "Switch to previous tab (back in history)"
         },
         "switch-next": {
             "suggested_key": {
-                "default": "MediaNextTrack"
+                "default": "MediaPrevTrack"
             },
             "description": "Switch to next tab (forward in history)"
         }
