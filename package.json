@@ -4,7 +4,13 @@
   "description": "Monorepo for TabZap browser extension suite",
   "scripts": {
     "build": "node scripts/build.js",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "test": "node --test test/*.test.js",
+    "publish:upload": "node scripts/publish.js",
+    "publish:release": "node scripts/publish.js --publish"
+  },
+  "devDependencies": {
+    "chrome-webstore-upload-cli": "^3.3.1"
   },
   "repository": {
     "type": "git",
@@ -16,5 +22,8 @@
     "browser"
   ],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }
